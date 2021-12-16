@@ -26,11 +26,16 @@ const app = new Vue({
                 this.counter = this.images.length -1;
             }
         },
-
-        position : function () {
+        funzione : function (index) {
             console.log("ciao");
-            console.log(this.index);
+            console.log(index);
+            this.counter = index;
+            
         }
+        // position : function () {
+        //     console.log("ciao");
+        //     console.log(this);
+        // }
     }
   })
 
