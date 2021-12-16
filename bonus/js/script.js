@@ -4,7 +4,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        // index : 0,
+        timer: 0,
         counter : 0,
       images : [
           "image1.jpg",
@@ -31,12 +31,17 @@ const app = new Vue({
             console.log(index);
             this.counter = index;
             
-        }
-        // position : function () {
-        //     console.log("ciao");
-        //     console.log(this);
-        // }
-    }
+        },
+
+        myTimer: function() {
+            this.timer = setInterval(function() {
+              app.next();
+            }, 2000);
+          }
+    },
+    created: function() {
+        this.myTimer();
+      }
   })
 
 //   Bonus:
