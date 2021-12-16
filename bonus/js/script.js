@@ -33,10 +33,20 @@ const app = new Vue({
             
         },
 
+        stopTimer: function() {
+            clearInterval(this.timer);
+            this.myTimer();
+            console.log("ciao");
+        },
+
+        // testo: function (){
+        //     console.log("ciao");
+        // },
+
         myTimer: function() {
             this.timer = setInterval(function() {
               app.next();
-            }, 2000);
+            }, 3000);
           }
     },
     created: function() {
