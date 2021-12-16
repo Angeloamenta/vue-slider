@@ -19,6 +19,11 @@ const app = new Vue({
                  this.counter = 0;
              }
          },
-         
+         prev: function () {
+            this.counter -= 1
+            if (this.counter < 0) {
+                this.counter = this.images.length -1;
+            }
+        }
     }
   })
