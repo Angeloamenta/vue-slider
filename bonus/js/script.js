@@ -25,9 +25,12 @@ const app = new Vue({
             if (this.counter < 0) {
                 this.counter = this.images.length -1;
             }
+        },
+
+        position : function () {
+            console.log("ciao");
+            console.log(this.index);
         }
-
-
     }
   })
 
